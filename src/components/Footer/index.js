@@ -5,7 +5,7 @@ import { Container } from './style'
 const Footer = () => (
     <Container>
         <Text style={{color:'white', fontSize: '12px', textAlign:'center'}}>Cléverton &copy; 2019</Text>
-        <Text style={{color:'white', fontSize: '12px', textAlign:'center'}}>Desenvolvido por Antonio Hamilton</Text>
+        <Text style={{color:'white', fontSize: '12px', textAlign:'center'}}>Desenvolvido por <a href="https://github.com/AntonioHamilton">Antonio Hamilton</a></Text>
     </Container>
 )
 
