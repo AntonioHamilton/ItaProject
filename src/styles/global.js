@@ -7,15 +7,15 @@ const GlobalStyle = createGlobalStyle `
     }
 
     @font-face {
-        font-family: 'Lobster';
-        src: url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+        font-family: 'Montserrat';
+        src: url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
     }
     
     html, body, #root, .App {
         height: 100%;
         background-color: #fff;
         color: #181313;
-        font-family: 'Lobster', cursive;
+        font-family: 'Montserrat', sans-serif;
     }
 `
 
