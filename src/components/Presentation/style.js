@@ -73,7 +73,7 @@ export const TextPresH2 = styled.h2 `
     width: 50%;
     text-align: justify;
     @media (max-width: 850px) {
-        font-size: 15px;
+        font-size: 18px;
         width: 80%
     }
 `

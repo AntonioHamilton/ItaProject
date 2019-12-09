@@ -44,7 +44,7 @@ export const SlideInfo = styled.div `
     @media (max-width: 1000px) {
         height: 50vh;
         right: 5%;
-        font-size: 12px;
+        font-size: 16px;
         width: 70%;
         display: flex;
         flex-direction: column;
