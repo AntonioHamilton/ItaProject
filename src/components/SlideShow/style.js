@@ -40,6 +40,7 @@ export const SlideInfo = styled.div `
     right: 10%;
     background-color: #FFFFFF;
     padding: 20px;
+    text-align: -webkit-center;
     @media (max-width: 1000px) {
         height: 50vh;
         right: 5%;
