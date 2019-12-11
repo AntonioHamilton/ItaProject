@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle `
         height: 100%;
         background-color: #fff;
         color: #181313;
-        font-family: 'Montserrat', sans-serif;
+        font-family: medium-content-title-font, Georgia, Cambria,"Times New Roman",Times, serif;
     }
 `
 

@@ -4,8 +4,8 @@ import React from 'react';
 import {Container, Title, TextPresH2, InfoContainer, InfoImg} from './style.js'
 
 //Import images
-import InfoImg1 from '../../assets/images/InfoImg1.png'
-import InfoImg2 from '../../assets/images/InfoImg2.png'
+import InfoImg1 from '../../assets/images/InfoImgs/InfoImg1.png'
+import InfoImg2 from '../../assets/images/InfoImgs/InfoImg2.png'
 
 const informations = [
     { 

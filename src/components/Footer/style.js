@@ -9,3 +9,12 @@ export const Container = styled.div `
     align-items: center;
     justify-content: center;
 `
+
+export const Anchor = styled.a `
+    text-decoration: none; 
+    color: white;
+    :hover {
+        text-decoration: underline; 
+        color: blueviolet;
+    }
+`
