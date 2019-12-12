@@ -15,7 +15,7 @@ export const Cards = styled.div `
 `
 
 export const WrapPost = styled.div `
-    padding: 30px;
+    padding: 20px 0px;
 `
 
 export const Image = styled.img `
@@ -23,9 +23,11 @@ export const Image = styled.img `
 `
 
 export const WrapText = styled.div `
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 export const Text = styled.h1 `
-
+    max-width: 250px;
 `
