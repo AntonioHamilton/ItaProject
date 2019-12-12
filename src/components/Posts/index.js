@@ -7,20 +7,14 @@ import {Container, WrapPost, Image, WrapText, Text, Cards} from './style'
 export default class Posts extends Component {
 
     state = {
-        feed: [
-            {image:'a', author: 'Tonho', title: '🙈🙉🙊👀❤😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈', description: 'd'},
-            {image:'a', author: 'b', title: 'c', description: 'd'},
-            {image:'a', author: 'b', title: 'c', description: 'd'},
-            {image:'a', author: 'b', title: 'c', description: 'd'},
-            {image:'a', author: 'b', title: 'c', description: 'd'},
-        ]
+        feed: []
     }
 
-    /*async componentDidMount () {
+    async componentDidMount () {
         const response = await api.get('posts');
         this.setState({feed: response.data});
         console.log(response.data)
-    }*/
+    }
 
     render () {
         return (
