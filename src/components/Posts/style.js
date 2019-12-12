@@ -19,13 +19,19 @@ export const WrapPost = styled.div `
 `
 
 export const Image = styled.img `
-
+    transition: all 1s;
+    :hover {
+        transform: translate(5px, 5px);
+        border-style: solid;
+        box-shadow: 2px 1px 1px black; 
+    }
 `
 
 export const WrapText = styled.div `
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 `
 
 export const Text = styled.h1 `
