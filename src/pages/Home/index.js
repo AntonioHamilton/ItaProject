@@ -1,13 +1,12 @@
 import React from 'react'
 
-import Presentation from '../../components/Presentation'
 import SlideShow from '../../components/SlideShow/index'
-
+import Posts from '../../components/Posts/index'
 
 const Home = () => (
     <>
         <SlideShow/>
-        <Presentation/>
+        <Posts/>
     </>
 )
 

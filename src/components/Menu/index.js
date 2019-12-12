@@ -2,11 +2,19 @@ import React from 'react';
 
 import {ContainerMenu, Logo, NavBar, ItemMenu} from './style'
 
+import logo from '../../assets/images/Logo.png'
+
+const items = [
+    "teste", "teste", "teste", "teste"
+]
+
 const Menu = () => (
     <ContainerMenu>
-        <Logo/>
+        <Logo href="/"><img src={logo} alt="logo"/></Logo>
         <NavBar>
-            <ItemMenu>teste</ItemMenu>
+            {items.map((item, index)=>(
+                <ItemMenu width={100/items.length} key={index}>teste</ItemMenu>
+            ))}
         </NavBar>
     </ContainerMenu>
 )

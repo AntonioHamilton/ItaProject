@@ -1,51 +1,21 @@
 import React from 'react';
-import { Slide } from 'react-slideshow-image';
+import AwesomeSlider from 'react-awesome-slider';
+import AwesomeSliderStyles from 'react-awesome-slider/src/styled/cube-animation'
 
-import {Container} from '../Presentation/style'
-import {SlideShow, SlideInfo, SlideImg, SlideTitle, SlideText} from './style'
+import {Container, WrapProject} from './style'
 
-import img1 from '../../assets/images/slideImgs/Slide1.png'
-import img2 from '../../assets/images/slideImgs/Slide2.png'
-import img3 from '../../assets/images/slideImgs/Slide3.png'
+import img1 from '../../assets/images/PublishBackground.png'
 
-const properties = {
-    duration: 10000000,
-    transitionDuration: 500,
-    infinite: true,
-    indicators: true,
-    arrows: true,
-    onChange: (oldIndex, newIndex) => {
-        console.log(`slide transition from ${oldIndex} to ${newIndex}`);
-    }
-}
-
-const SlideCss = {
-    width: '100%',
-    alignSelf: 'center',
-    height: 'auto',
-}
-
-const slides = [
-    {image: img1, titulo:"IGREJA EM ITABAIANA" , resumo:"A igreja mais bonita da cidade eu queria que todos pudessem ver pq é bem bonita mesmo, só estou enrolando nesse texto espero que ninguém leia totalmente, mas é bem legal né não?"},
-    {image: img2, titulo:"JOGÃO EM ITABAIANA" , resumo:"A primeira partida patrocinada de itabaiana"},
-    {image: img3, titulo:"SHOPPING PEIXOTO EM ITABAIANA" , resumo:"Esse shopping localizado no centro da cidade, é alvo de uma massiva quantidade de consumidores todos os dias"}
-]
-
-const ImpresiveSlide = () => (
-    <Container style={{marginTop: '0px'}}>
-        <Slide {...properties} style={SlideCss}>
-            {slides.map((item, index)=>(
-                <SlideShow className="each-slide" key={index}>
-                    <SlideImg src={item.image}/>
-                    <SlideInfo>
-                        <SlideTitle>{item.titulo}</SlideTitle>
-                        <SlideText>{item.resumo}</SlideText>
-                    </SlideInfo>
-                </SlideShow>
-            ))}
-            
-        </Slide>
+const Slider = () => (
+    <Container>
+        <WrapProject>
+            <AwesomeSlider cssModule={AwesomeSliderStyles}>
+                <img data-src={img1} alt="img1"/>
+                <img data-src={img1} alt="img2"/>
+                <img data-src={img1} alt="img3"/>
+            </AwesomeSlider>
+        </WrapProject>
     </Container>
 )
 
-export default ImpresiveSlide;
+export default Slider;

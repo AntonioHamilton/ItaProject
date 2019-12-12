@@ -1,42 +1,74 @@
 import styled from 'styled-components';
 
+export const Container = styled.div `
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: ${({form})=> form ? '900px' : '100%'};
+    margin-top: 40px;
+    @media(max-width: 850px) {
+        margin-top: 50px;
+        height: auto;
+        width: auto;
+    }
+    @media(max-width: 400px) {
+    
+    }
+`
+
 export const InputForm = styled.input `
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    color: #000000;
+    padding: ${({name}) => name === 'Title' ? '10px' : '10px'};
     border: none;
-    height: 30px;
+    height: ${({type})=> type === 'file' ? '35px' : '30px'};
     outline: none;
     font-family: unset;
     font-size: 18px;
-    margin-bottom: 10px;
-    width: 100%;
+    margin-bottom: ${({type})=> type === 'file' ? '0' : '0px'};
+    width: ${({type})=> type === 'file' ? '67' : '95'}%;
     font-family: medium-content-title-font, Georgia, Cambria,"Times New Roman",Times, serif;
     position: ${({type})=> type === 'file' ? 'absolute' : 'relative'};
-    top: ${({type})=> type === 'file' ? '32px' : '0'};
+    top: ${({type})=> type === 'file' ? '90px' : '0'};
     opacity: ${({type})=> type === 'file' ? 0 : 1};
     cursor: ${({type})=> type === 'file' ? 'pointer' : 'auto'};
+    align-self: center;
+    @media(max-width: 600px) {
+        padding: 0px;
+    }
 `
 
 export const ButtonForm = styled.button `
+    padding: 10px;
     font-size: 18px;
     background-color: #3498db;
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
-    margin: 20px 0px 50px 0px;
+    margin: 20px 0px 20px 0px;
     padding: 6px 20px;
-    width: 100%;
+    width: 96.5%;
+    outline: none;
+    border: none;
 `
 
 export const InputDescription = styled.textarea `
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    color: #000000;
     border: none;
     min-height: 70%;
-    width: 100%;
-    min-width: 100%;
+    width: 95%;
+    min-width: 95%;
     font-family: unset;
     font-size: 19px;
     outline: none;
     margin-top: 5px;
     margin-bottom: 5px;
-    padding: 0;
+    padding: 10px;
     height: auto;
     resize: none;
     cursor: auto;
@@ -49,6 +81,12 @@ export const InputDescription = styled.textarea `
     }
     ::-webkit-scrollbar-track {
         background: #fff;
+    }
+    @media(max-width: 850px){
+        min-height: 500px;
+    }
+    @media(max-width: 600px) {
+        padding: 0px;
     }
     font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
 `
@@ -63,4 +101,17 @@ export const PostForm = styled.form `
     font-family: unset;
     outline: none;
     font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+    @media(max-width: 600px) {
+        width: 95%;
+    }
+    @media(max-width: 600px) {
+        width: 100%;
+    }
+`
+
+export const Background = styled.img `
+    position: absolute;
+    z-index: -10;
+    height: 100%;
+    width: 100%;
 `

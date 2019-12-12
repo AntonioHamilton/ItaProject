@@ -2,10 +2,10 @@ import React from 'react';
 import Form from '../../components/Form/index'
 
 
-const Postar = () => (
+const Publish = () => (
     <>
         <Form/>
     </>
 )
 
-export default Postar;
+export default Publish;
