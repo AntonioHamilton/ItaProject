@@ -4,6 +4,9 @@ export const ContainerMenu = styled.div `
     background-color: #FF914D;
     display: flex;
     align-items: center;
+    @media (max-width: 700px) {
+        justify-content: center;
+    }
 `
 
 export const Logo = styled.a `
@@ -11,6 +14,21 @@ export const Logo = styled.a `
     height: auto;
     margin-left: 5%;
     margin-right: 40%;
+    @media(max-width: 1000px) {
+        margin-right: 20%;
+    }
+    @media(max-width: 850px) {
+        margin-right: 10%;
+    }
+    @media (max-width: 700px) {
+        margin: 0;
+    }
+    @media (max-width: 370px) {
+        height: 50%;
+        padding: 0px;
+        display: flex;
+        text-align: center;
+    }
 `
 
 
@@ -19,6 +37,9 @@ export const NavBar = styled.div `
     height: auto;
     width: 40%;
     justify-content: space-between;
+    @media (max-width: 700px) {
+        display: none;
+    }
 `
 
 export const ItemMenu = styled.a `

@@ -10,7 +10,7 @@ const items = [
 
 const Menu = () => (
     <ContainerMenu>
-        <Logo href="/"><img src={logo} alt="logo"/></Logo>
+        <Logo href="/"><img src={logo} style={{width: '100%'}} alt="logo"/></Logo>
         <NavBar>
             {items.map((item, index)=>(
                 <ItemMenu width={100/items.length} key={index}>teste</ItemMenu>
