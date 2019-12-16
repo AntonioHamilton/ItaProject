@@ -8,7 +8,7 @@ export default class Posts extends Component {
     state = {
         feed: [],
         pictures: [],
-        display: false,
+        display: '',
         index: 0,
         newPost: {}
     }
@@ -26,14 +26,14 @@ export default class Posts extends Component {
             description: this.state.feed[this.state.index].description,
         }
         this.setState({newPost: newPost});
-        this.setState({display: true});
+        this.setState({display: 'true'});
     }
 
     render () {
         return (
             <Container display={this.state.display}>
                 <Publish show={this.state.display}>
-                    <ButtonClose onClick={() => this.setState({display: false})}>X</ButtonClose>
+                    <ButtonClose onClick={() => this.setState({display: ''})}>X</ButtonClose>
                     <PostImage src={`data:image/jpeg;base64,${this.state.newPost.image}`}/>
                     <PostText style={{paddingBottom:'0px'}}>{this.state.newPost.title}</PostText>
                     <PostText>{this.state.newPost.description}</PostText>

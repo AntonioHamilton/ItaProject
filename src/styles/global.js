@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle `
     }
     
     html, body, #root, .App {
-        height: 100%;
+        height: auto;
         color: #181313;
         font-family: medium-content-title-font, Georgia, Cambria,"Times New Roman",Times, serif;
     }
