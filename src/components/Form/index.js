@@ -45,7 +45,7 @@ const Form = () => {
     }
 
     return (
-        <Container style={{marginTop:"0px", backgroundColor:'none', backgroundImage:`URL(${background})`}} form={true}>
+        <Container style={{marginTop:"0px", backgroundColor:'none', backgroundImage:`URL(${background})`}} form='true'>
             <Background src={background}/>
             <PostForm>
                 <ButtonForm onClick={(e)=>{e.preventDefault()}}>Inserir foto</ButtonForm>

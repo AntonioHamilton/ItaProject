@@ -53,3 +53,40 @@ export const WrapText = styled.div `
 export const Text = styled.h1 `
     max-width: 210px;
 `
+
+export const Publish = styled.div `
+    overflow: scroll;
+    display: ${({show}) => show ? 'flex' : 'none'};
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: black;
+    color: white;
+    z-index: 20;
+    padding: 20px;
+`
+
+export const PostImage = styled.img `
+    width: auto;
+    height: 85%;
+    align-self: center;
+    @media (max-width: 800px) {
+        width:  50%;
+        height: auto;
+    }
+`
+
+export const PostText = styled.h1 `
+    padding-bottom: 300px;
+    padding-top: 50px;
+    margin: 0px 5%;
+`
+
+export const ButtonClose = styled.button `
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    left: 5%;
+`
