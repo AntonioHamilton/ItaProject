@@ -9,10 +9,10 @@ import Map from '../../components/Map/index';
 
 const Home = () => (
     <Container>
-        <SlideShow/>
-        <Posts/>
-        <Map/>
-        <Footer/>
+        <SlideShow id="SlideShow"/>
+        <Posts id="Posts"/>
+        <Map id="Map"/>
+        <Footer id="Footer"/>
     </Container>
 )
 

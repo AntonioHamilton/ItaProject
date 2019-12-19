@@ -14,9 +14,6 @@ export const Container = styled.div `
         height: auto;
         width: auto;
     }
-    @media(max-width: 400px) {
-    
-    }
 `
 
 export const InputForm = styled.input `
@@ -33,12 +30,14 @@ export const InputForm = styled.input `
     width: ${({type})=> type === 'file' ? '67' : '95'}%;
     font-family: medium-content-title-font, Georgia, Cambria,"Times New Roman",Times, serif;
     position: ${({type})=> type === 'file' ? 'absolute' : 'relative'};
-    top: ${({type})=> type === 'file' ? '90px' : '0'};
+    top: ${({type})=> type === 'file' ? '9px' : '0'};
     opacity: ${({type})=> type === 'file' ? 0 : 1};
     cursor: ${({type})=> type === 'file' ? 'pointer' : 'auto'};
     align-self: center;
     @media(max-width: 600px) {
+        top: ${({type})=> type === 'file' ? '104px' : '0'};
         padding: 0px;
+        width: ${({type})=> type === 'file' ? '100' : '95'}%;
     }
 `
 
@@ -61,7 +60,7 @@ export const InputDescription = styled.textarea `
     border-radius: 10px;
     color: #000000;
     border: none;
-    min-height: 70%;
+    min-height: 60%;
     width: 95%;
     min-width: 95%;
     font-family: unset;

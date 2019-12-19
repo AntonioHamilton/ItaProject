@@ -11,14 +11,19 @@ export const ContainerMenu = styled.div `
     justify-content: center;
     align-items: center;
     @media(max-width: 550px) {
-        display:none;
+        flex-direction: row;
+        height: 10vh;
+        width: 100%;
+        z-index: 20;
+    }
+    @media(max-height: 600px) {
+        height: 70px;
     }
 `
 
 export const Logo = styled.a `
     height: auto;
 `
-
 
 export const NavBar = styled.div `
     flex-direction: column;
@@ -27,11 +32,15 @@ export const NavBar = styled.div `
     height: 50%;
     display: flex;
     height: auto;
-    width: 40%;
+    width: 100%;
     justify-content: space-between;
+    @media(max-width: 550px) {
+        margin-top: 118vh;
+    }
 `
 
 export const ItemMenu = styled.a `
+    text-decoration: none;
     color: white;
     padding-top: 3%;
     padding-bottom: 3%;
@@ -56,6 +65,9 @@ export const ItemMenu = styled.a `
 export const WrapIcons = styled.div `
     display: flex;
     margin-top: 20px;
+    @media(max-width: 550px) {
+        align-self:center;
+    }
 `
 
 export const Icon = styled.img `
@@ -67,5 +79,47 @@ export const Icon = styled.img `
 `
 
 export const Image = styled.img `
+    @media(max-width: 550px) {
+        width: 15vh;
+        margin: 20px 0px;
+        height: 100px;
+        width: 100px;
+    }
+`
 
+export const HamburgerStyle = styled.div `
+    display:none;
+    @media (max-width: 550px) {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 6px;
+        padding: 10px;
+        z-index: 40;
+        margin: 15px 0px;
+    }
+`
+
+export const WrapLogo = styled.div `
+    margin-top: -100px;
+    height: 60%;
+    @media (max-height: 500px) {
+        height: auto;
+        margin-top: -50px;
+    }
+`
+
+export const WrapNavBar = styled.div `
+    text-align: -webkit-center;
+    position: relative;
+    @media (max-width: 550px) {
+        position: absolute; 
+        display: flex;
+        flex-direction: column;
+        background-color: #F17B2D;
+        left: ${({enable}) => enable ? 0 : -600}px;
+        width: 100%;
+        height: 200vh;
+        transition: .5s linear;
+    }
 `

@@ -20,6 +20,9 @@ const GlobalStyle = createGlobalStyle `
 
     .App {
         display: flex;
+        @media(max-width: 550px) {
+            flex-direction: column;
+        }
     }
 `
 
