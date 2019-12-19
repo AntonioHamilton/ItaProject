@@ -2,7 +2,7 @@ import React from 'react'
 
 import {Container, Title, Frame} from './style'
 
-import Serra from '../../assets/images/someImgs/Serra4.png'
+import Serra from '../../assets/images/someImgs/Serra4.jpeg'
 
 const Map = () => (
     <Container style={{backgroundImage:`URL(${Serra})`}}>

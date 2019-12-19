@@ -31,25 +31,28 @@ export default class Posts extends Component {
 
     render () {
         return (
-            <Container display={this.state.display}>
-                <Publish show={this.state.display}>
-                    <ButtonClose onClick={() => this.setState({display: ''})}>X</ButtonClose>
-                    <PostImage src={`data:image/jpeg;base64,${this.state.newPost.image}`}/>
-                    <PostText style={{paddingBottom:'0px'}}>{this.state.newPost.title}</PostText>
-                    <PostText>{this.state.newPost.description}</PostText>
-                </Publish>
-                <Cards>
-                {this.state.feed.map((item, index)=>(
-                    <WrapPost key={index}>
-                        <Image src={`data:image/jpeg;base64,${item.image}`} data-index={index} onClick={this.handleClick}/>
-                        <WrapText>
-                            <Text style={{fontWeight: 100, fontSize: '15px'}}>Autor: {item.author}</Text>
-                            <Text>{item.title}</Text>
-                        </WrapText>
-                    </WrapPost>
-                ))}
-                </Cards>
-            </Container>
+            <>
+                <Text style={{alignSelf: 'center'}}>POSTAGENS</Text>
+                <Container display={this.state.display}>
+                    <Publish show={this.state.display}>
+                        <ButtonClose onClick={() => this.setState({display: ''})}>X</ButtonClose>
+                        <PostImage src={`data:image/jpeg;base64,${this.state.newPost.image}`}/>
+                        <PostText style={{paddingBottom:'0px'}}>{this.state.newPost.title}</PostText>
+                        <PostText>{this.state.newPost.description}</PostText>
+                    </Publish>
+                    <Cards>
+                    {this.state.feed.map((item, index)=>(
+                        <WrapPost key={index}>
+                            <Image src={`data:image/jpeg;base64,${item.image}`} data-index={index} onClick={this.handleClick}/>
+                            <WrapText>
+                                <Text style={{fontWeight: 100, fontSize: '15px'}}>Autor: {item.author}</Text>
+                                <Text>{item.title}</Text>
+                            </WrapText>
+                        </WrapPost>
+                    ))}
+                    </Cards>
+                </Container>
+            </>
         )
     }
 }
