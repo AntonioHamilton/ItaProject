@@ -6,6 +6,7 @@ export const Container = styled.div `
     justify-content: center;
     top: 0;
     left: 0;
+    height: 100%;
     height: ${({form})=> form ? '900px' : '100%'};
     margin-top: 40px;
     @media(max-width: 850px) {
@@ -107,11 +108,4 @@ export const PostForm = styled.form `
     @media(max-width: 600px) {
         width: 100%;
     }
-`
-
-export const Background = styled.img `
-    position: absolute;
-    z-index: -10;
-    height: 100%;
-    width: 100%;
 `

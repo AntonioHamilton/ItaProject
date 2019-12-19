@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Container, InputForm, InputDescription, PostForm, ButtonForm, Background} from './style'
+import {Container, InputForm, InputDescription, PostForm, ButtonForm} from './style'
 import api from '../../services/api'
 
 import background from '../../assets/images/PublishBackground.png'
@@ -27,7 +27,7 @@ const Form = () => {
 
         await api.post('posts', data);
 
-        window.location.href = "http://localhost:3000/"
+        window.location.href = window.location.origin
     }
 
     const handleImage = (e) => {
@@ -45,8 +45,7 @@ const Form = () => {
     }
 
     return (
-        <Container style={{marginTop:"0px", backgroundColor:'none', backgroundImage:`URL(${background})`}} form='true'>
-            <Background src={background}/>
+        <Container style={{marginTop:"0px", backgroundColor:'none', backgroundImage:`URL(${background})`, height: '100%'}} form='true'>
             <PostForm>
                 <ButtonForm onClick={(e)=>{e.preventDefault()}}>Inserir foto</ButtonForm>
                 <InputForm name="File" type="file" onChange={handleImage} />

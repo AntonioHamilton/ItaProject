@@ -1,16 +1,14 @@
 import React from 'react';
 import Routes from './routes/index'
 import GlobalStyle from './styles/global';
-import Footer from './components/Footer/index'
-import Menu from './components/Menu';
+import MenuHome from './components/MenuHome';
 
 function App() {
   return (
     <div className="App">
-      <Menu/>
+      <MenuHome/>
       <GlobalStyle/>
       <Routes/>
-      <Footer/>
     </div>
   );
 }

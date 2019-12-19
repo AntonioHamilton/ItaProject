@@ -12,13 +12,13 @@ export const Cards = styled.div `
     display: grid;
     grid-template-columns: repeat(4, 25%);
     margin-bottom: 20px;
-    @media(max-width: 1100px) {
+    @media(max-width: 1250px) {
         grid-template-columns: repeat(3, 33%);
     }
-    @media(max-width: 850px) {
+    @media(max-width: 1000px) {
         grid-template-columns: repeat(2, 50%);
     }
-    @media(max-width: 550px) {
+    @media(max-width: 750px) {
         grid-template-columns: repeat(1, 100%);
     }
     @media(max-width: 350px) {
@@ -27,11 +27,13 @@ export const Cards = styled.div `
 `
 
 export const WrapPost = styled.div `
-    padding: 20px 0px;
+    padding: 25px 0px;
+    background-color: white;
 `
 
 export const Image = styled.img `
     transition: all 1s;
+    margin-bottom: 5px;
     height: 210px;
     width: 200px;
     :hover {
