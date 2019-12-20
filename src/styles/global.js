@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle `
         color: #333333;
         background-color: #F5F5F5;
         font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+        scroll-behavior: smooth; 
     }
 
     .App {

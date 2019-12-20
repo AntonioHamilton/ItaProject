@@ -33,7 +33,7 @@ export default class Posts extends Component {
         return (
             <>
                 <Text style={{alignSelf: 'center'}}>POSTAGENS</Text>
-                <Container display={this.state.display}>
+                <Container display={this.state.display} id={this.props.id}>
                     <Publish show={this.state.display}>
                         <ButtonClose onClick={() => this.setState({display: ''})}>X</ButtonClose>
                         <PostImage src={`data:image/jpeg;base64,${this.state.newPost.image}`}/>

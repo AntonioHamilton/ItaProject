@@ -8,12 +8,14 @@ import Footer from '../../components/Footer/index'
 import Map from '../../components/Map/index';
 
 const Home = () => (
-    <Container>
-        <SlideShow id="SlideShow"/>
-        <Posts id="Posts"/>
-        <Map id="Map"/>
-        <Footer id="Footer"/>
-    </Container>
+    <>
+        <Container>
+            <SlideShow id="slide"/>
+            <Posts id="posts"/>
+            <Map id="map"/>
+            <Footer id="footer"/>
+        </Container>
+    </>
 )
 
 export default Home;

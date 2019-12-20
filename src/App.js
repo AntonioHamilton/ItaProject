@@ -1,12 +1,12 @@
 import React from 'react';
 import Routes from './routes/index'
 import GlobalStyle from './styles/global';
-import MenuHome from './components/MenuHome';
+import Menu from './components/Menu';
 
 function App() {
   return (
     <div className="App">
-      <MenuHome/>
+      <Menu/>
       <GlobalStyle/>
       <Routes/>
     </div>

@@ -27,7 +27,7 @@ const Form = () => {
 
         await api.post('posts', data);
 
-        window.location.href = window.location.origin
+        window.location.href = `${window.location.origin}/admin`
     }
 
     const handleImage = (e) => {

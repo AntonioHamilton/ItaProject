@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ContainerMenu = styled.div `
     background-color: #F17B2D;
-    display: flex;
+    display: ${({local, origin}) => `${local}` === `${origin}/accounts` ? 'none' : 'flex'};
     width: 200px;
     height: 100vh;
     position: sticky;
@@ -90,7 +90,7 @@ export const Image = styled.img `
 export const HamburgerStyle = styled.div `
     display:none;
     @media (max-width: 550px) {
-        display: flex;
+        display: ${({local, origin}) => `${local}` === `${origin}/accounts` ? 'none' : 'flex'};
         position: fixed;
         top: 0;
         left: 6px;

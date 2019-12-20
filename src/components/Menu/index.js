@@ -5,26 +5,24 @@ import {ContainerMenu, NavBar, ItemMenu, WrapIcons, Icon, Logo, Image, Hamburger
 import logo from '../../assets/images/Logo.png'
 
 const origin = window.location.origin;
+const local = window.location.href;
 
 let items = []
 
-console.log(window.location.href)
-console.log(window.location.origin)
-
-if (window.location.href == `${origin}/`) {
+if (window.location.href === `${origin}/admin` || window.location.href === `${origin}/admin/postar`) {
     items = [
-        {name: 'HOME', href: '/#SlideShow'},
-        {name: 'POSTAGENS', href: '/#Posts'},
-        {name: 'LOCALIZAÇÃO', href: '/#Map'},
-        {name: 'CONTATO', href: '/#Footer'},
-        {name: 'LOGIN', href: '/admin'},
+        {name: 'ADMINISTRAR', href: '/admin'},
+        {name: 'PUBLICAR', href: '/admin/postar'},
+        {name: 'HOME', href: '/'},
     ]
 }
 else {
     items = [
-        {name: 'HOME', href: '/'},
-        {name: 'PUBLICAR', href: '/admin/postar'},
-        {name: 'POSTAGENS', href: '/admin'},
+        {name: 'HOME', href: '#slide'},
+        {name: 'POSTAGENS', href: '#posts'},
+        {name: 'LOCALIZAÇÃO', href: '#map'},
+        {name: 'CONTATO', href: '#footer'},
+        {name: 'LOGIN', href: '/accounts'},
     ]
 }
 
@@ -34,7 +32,7 @@ const Menu = () => {
 
     return (
         <>
-            <HamburgerStyle>
+            <HamburgerStyle local={local} origin={origin}>
                 <HamburgerButton
                     open={enable}
                     onClick = {() => setEnable(!enable)}
@@ -45,7 +43,7 @@ const Menu = () => {
                     animationDuration={0.5}
                 />
             </HamburgerStyle>
-            <ContainerMenu enable={enable}>
+            <ContainerMenu enable={enable} local={local} origin={origin}>
                 <WrapLogo>
                     <Logo href="/">
                         <Image src={logo}/>

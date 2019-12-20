@@ -8,8 +8,8 @@ import img1 from '../../assets/images/someImgs/Serra5.jpeg'
 import img2 from '../../assets/images/someImgs/Serra6.jpeg'
 import img3 from '../../assets/images/someImgs/Serra7.jpeg'
 
-const Slider = () => (
-    <Container>
+const Slider = (data) => (
+    <Container id={data.id}>
         <WrapProject>
             <AwesomeSlider cssModule={AwesomeSliderStyles}>
                 <img data-src={img1} alt="img1"/>

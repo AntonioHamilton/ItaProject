@@ -19,6 +19,9 @@ export const WrapPost = styled.div `
     height: 100px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
+    justify-content: start;
+    margin-left: 70vh;
     border-radius: 200px;
 `
 

@@ -25,6 +25,7 @@ const ListPost = () => {
 
     return (
         <Container>
+            <Text style={{marginLeft: '69.5vh', fontWeight: 900, fontSize: 'x-large'}}>TODAS AS POSTAGENS</Text>
             <List>
                 {posts.map((item, index)=>(
                     <WrapPost  key={index}>

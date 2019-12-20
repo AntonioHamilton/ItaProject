@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, Anchor, Text, WrapLeft, WrapRight, Wrap } from './style'
 
-const Footer = () => (
-    <Container>
+const Footer = (data) => (
+    <Container id={data.id}>
         <Wrap>
             <WrapLeft> 
                 <Text style={{fontSize: '18px', fontWeight: 'bold'}}>Parna</Text>
