@@ -2,12 +2,11 @@ import React, {Component} from 'react';
 
 import api from '../../services/api'
 
-import {Container, WrapPost, Image, WrapText, Text, Cards, Publish, PostImage, PostText, ButtonClose} from './style'
+import {Container, WrapPost, Image, WrapText, Text, Cards, Publish, PostImage, PostText, ButtonClose, PostTitle} from './style'
 
 export default class Posts extends Component {
     state = {
         feed: [],
-        pictures: [],
         display: '',
         index: 0,
         newPost: {}
@@ -15,6 +14,7 @@ export default class Posts extends Component {
 
     async componentDidMount () {
         const response = await api.get('posts');
+
         this.setState({feed: response.data});
     }
 
@@ -34,10 +34,10 @@ export default class Posts extends Component {
             <>
                 <Text style={{alignSelf: 'center'}}>POSTAGENS</Text>
                 <Container display={this.state.display} id={this.props.id}>
-                    <Publish show={this.state.display}>
-                        <ButtonClose onClick={() => this.setState({display: ''})}>X</ButtonClose>
+                    <Publish className="OpenPost" show={this.state.display}>
+                        <ButtonClose onClick={() => this.setState({display: ''})}><img src="https://img.icons8.com/plasticine/40/000000/back.png"/></ButtonClose>
+                        <PostTitle style={{paddingBottom:'0px'}}>{this.state.newPost.title}</PostTitle>
                         <PostImage src={`data:image/jpeg;base64,${this.state.newPost.image}`}/>
-                        <PostText style={{paddingBottom:'0px'}}>{this.state.newPost.title}</PostText>
                         <PostText>{this.state.newPost.description}</PostText>
                     </Publish>
                     <Cards>

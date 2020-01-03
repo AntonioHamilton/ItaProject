@@ -17,7 +17,7 @@ const Form = () => {
 
     const handleForm = async (e) => {
         e.preventDefault();
-  
+
         const data = new FormData();
 
         data.append('image', Info.File);
@@ -51,7 +51,7 @@ const Form = () => {
                 <InputForm name="File" type="file" onChange={handleImage} />
                 <p style = {{marginTop: '-15px', marginBottom: '10px', color:'White'}}>{fileName ? fileName : 'Escolha um arquivo'}</p>
                 <InputForm name="Title" type="text" placeholder="Título" style={{fontSize:"40px"}} onChange={handleChange} />
-                <InputDescription name="Description" type="text" placeholder="Resumo" onChange={handleChange}/>
+                <InputDescription name="Description" type="text" placeholder="Resumo" wrap="hard" onChange={handleChange}/>
                 <InputForm name="Author" type="text" placeholder="Autor do texto" onChange={handleChange}/>
                 <ButtonForm style={{width: "150px"}} onClick={handleForm}>Publicar</ButtonForm>
             </PostForm>

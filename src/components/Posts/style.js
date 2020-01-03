@@ -66,8 +66,12 @@ export const Publish = styled.div `
     top: 0px;
     background-color: black;
     color: white;
-    z-index: 20;
-    padding: 20px;
+    z-index: 2000;
+    padding: 50px 0px;
+    left: 0;
+    background: #e2e0d8;
+
+    color: black;
 `
 
 export const PostImage = styled.img `
@@ -75,20 +79,58 @@ export const PostImage = styled.img `
     height: 85%;
     align-self: center;
     @media (max-width: 800px) {
-        width:  50%;
+        width:  100%;
         height: auto;
     }
 `
+export const PostTitle = styled.h1 `
+    margin: 20px 5%;
+    font-size: 50px;
+    @media(max-width: 800px) {
+        padding-bottom: 0px;
+        background: rgba(0, 0, 0, 0.4);
+        left: 0;
+        margin: 0;
+        font-size: 20px;
+        width: 100%;
+        padding-left: 5px;
+        color: white;
+        font-weight: 100;
+    }
+`
 
-export const PostText = styled.h1 `
-    padding-bottom: 300px;
-    padding-top: 50px;
+export const PostText = styled.p `
+    font-size: 20px;
+    padding: 10px 200px 300px;
     margin: 0px 5%;
+    text-align: left;
+    @media(max-width: 1400px) {
+        padding: 10px 50px 300px;
+    }
+    @media(max-width: 800px) {
+        font-size: 17px;
+        padding: 10px 0px 300px;
+        margin: 0px 1%;
+    }
+    @media(max-width: 500px) {
+        font-size: 14px;
+    }
 `
 
 export const ButtonClose = styled.button `
     position: fixed;
-    width: 20px;
-    height: 20px;
-    left: 5%;
+    width: auto;
+    height: auto;
+    left: 5px;
+    top: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all .2s;
+    :hover {
+        transform: translateX(10px);
+    }
+    :active {
+        transform: translateX(10px);
+    }
 `

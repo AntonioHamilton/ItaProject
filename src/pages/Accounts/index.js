@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import api from '../../services/api'
 
-import {Container, WrapLogin, WrapSign, Sign, WrapForm, WrapInput, Input, Button, Text, Logo, Image} from './style'
+import {Container, WrapLogin, WrapSign, Sign, Sign2, WrapForm, WrapInput, Input, Button, Text, Logo, Image} from './style'
 import background from '../../assets/images/someImgs/background.jpg'
 import logo from '../../assets/images/Logo.png'
 
@@ -42,8 +42,8 @@ const Accounts = () => {
             <WrapLogin background={background}>
                 <Logo href='/'><Image src={logo}/></Logo>
                 <WrapSign>
-                    <Sign onClick={()=>setSignIn(true)}>Entrar</Sign>
-                    <Sign onClick={()=>setSignIn(false)}>Cadastrar</Sign>
+                    <Sign className="entrar" SignIn={SignIn} onClick={()=>setSignIn(true)}>Entrar</Sign>
+                    <Sign2 className="cadastrar" SignIn={SignIn} onClick={()=>setSignIn(false)}>Cadastrar</Sign2>
                 </WrapSign>
                 <WrapForm onSubmit={HandleSubmit}>
                     {Inputs.map((item, index)=>

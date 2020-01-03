@@ -16,9 +16,10 @@ export const WrapLogin = styled.div `
     flex-direction: column;
     justify-content: center;
     align-self: center;
-    background-image: URL(${({background})=> background});
+    background-image: URL(${({background}) => background});
     background-repeat: no-repeat;
     background-size:cover;
+    box-shadow: 10px 10px 20px black;
 `
 
 export const WrapSign = styled.div `
@@ -33,12 +34,23 @@ export const WrapSign = styled.div `
 
 export const Sign = styled.a `
     cursor: pointer;
-    text-decoration: none;
     transition: all 1s linear;
     margin: 20px 20px;
     font-size: 20px;
     font-weight: bolder;
     outline: none;
+    text-decoration: ${({SignIn}) => SignIn === true ? 'underline' : 'none'};
+`
+
+
+export const Sign2 = styled.a `
+    cursor: pointer;
+    transition: all 1s linear;
+    margin: 20px 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    outline: none;
+    text-decoration: ${({SignIn}) => SignIn === false ? 'underline' : 'none'};
 `
 
 export const WrapForm = styled.form `
@@ -84,6 +96,15 @@ export const Button = styled.button `
     padding: 5px;
     width: 74%;
     margin-top: 40px;
+    cursor: pointer;
+    box-shadow: 2px 3px 1px #2c31de;
+    :hover {
+        background-color: #2c31de;
+    }
+    :active {
+        position:relative;
+        top:1px;
+    }
 `
 
 export const Logo = styled.a `
