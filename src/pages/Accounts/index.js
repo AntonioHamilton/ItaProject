@@ -23,7 +23,6 @@ const Accounts = () => {
         let newForm = form;
         newForm[e.target.name.toLowerCase()] = e.target.value
         setForm(newForm);
-        console.log(form);
     }
 
     const HandleSubmit = (e) => {
