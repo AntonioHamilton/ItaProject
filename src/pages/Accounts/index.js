@@ -28,7 +28,7 @@ const Accounts = () => {
 
     const HandleSubmit = (e) => {
         e.preventDefault();
-        if (Sign === true) {
+        if (SignIn === true) {
 	        api.post('login', {login: form.username, password: form.password})
 	        .then((response)=> {
 	            window.location.href = `${window.location.origin}/admin`
