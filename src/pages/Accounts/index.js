@@ -28,12 +28,19 @@ const Accounts = () => {
 
     const HandleSubmit = (e) => {
         e.preventDefault();
-        api.post('login', {login: form.username, password: form.password})
-        .then((response)=> {
-            window.location.href = `${window.location.origin}/admin`
-        })
-        .catch((err) => console.log(err))
-
+        if (Sign === true) {
+	        api.post('login', {login: form.username, password: form.password})
+	        .then((response)=> {
+	            window.location.href = `${window.location.origin}/admin`
+	        })
+	        .catch((err) => console.log(err))	
+        } else {
+        	api.post('user', {login: form.username, password: form.password})
+	        .then((response)=> {
+	            window.location.href = `${window.location.origin}/admin`
+	        })
+	        .catch((err) => console.log(err))
+        }
         
     }
 
