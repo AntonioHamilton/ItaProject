@@ -13,7 +13,7 @@ const ListPost = () => {
             const response = await api.get('posts');
             setPosts(response.data);
         })()
-    }, [posts])
+    }, [])
 
     const deletePost = (e) => {
         api.delete(`posts/${e.target.dataset.id}`)
